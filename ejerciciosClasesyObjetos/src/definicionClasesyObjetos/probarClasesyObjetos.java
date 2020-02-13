@@ -93,6 +93,20 @@ public class probarClasesyObjetos {
 //		static double cbrt(double a): Raíz cúbica
 //		static double random(): Devuelve un número aleatorio entre 0.0 (incluido) y 1.0 (no incluido)	
 
+		double num1 = 5;
+		double num2 = 7;
+		double num3 = 0;
+		
+		System.out.println(" ");
+		
+		num3 = Math.exp(num1);
+		System.out.println("exponencial "+num3);
+		
+		num3 = Math.sqrt(num1);
+		System.out.println("raiz "+num3);
+		
+		num3 = Math.random();
+		System.out.println("random "+num3);
 	}
 
 }
