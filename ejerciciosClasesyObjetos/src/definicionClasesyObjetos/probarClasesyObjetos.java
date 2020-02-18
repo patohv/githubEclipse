@@ -33,7 +33,7 @@ public class probarClasesyObjetos {
 		double d = 0;
 		while (!s.hasNextDouble())
 			s.nextDouble();
-				
+
 		d = s.nextDouble();
 		System.out.println(d);
 		
