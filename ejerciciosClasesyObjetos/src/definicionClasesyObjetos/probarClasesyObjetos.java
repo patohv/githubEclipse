@@ -171,7 +171,7 @@ public class probarClasesyObjetos {
 //				"Es necesario que seleccione una opcion", "Titulo", 
 //				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, 
 //				optionsX, optionsX[0]);
-		
+//		hh
 		System.out.println("Seleccion "+seleccion);
 	}
 
