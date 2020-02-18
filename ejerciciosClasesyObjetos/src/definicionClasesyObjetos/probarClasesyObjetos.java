@@ -2,6 +2,8 @@ package definicionClasesyObjetos;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class probarClasesyObjetos {
 
 	public static void main(String[] args) {
@@ -107,6 +109,70 @@ public class probarClasesyObjetos {
 		
 		num3 = Math.random();
 		System.out.println("random "+num3);
+		
+//		JOption
+//		#################################################
+		System.out.println("aqui voy ");
+		String[] optionsX = {"Opcion A", "Opcion B", "Opcion C", "Opcion D"};
+		int seleccion = JOptionPane.showOptionDialog(null, 
+				"Es necesario que seleccione una opcion", "Titulo", 
+				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, 
+				optionsX, optionsX[0]);
+		
+		System.out.println("Seleccion "+seleccion);
+		
+        JOptionPane.showMessageDialog(null, "Operación realizada correctamente");
+        
+		JOptionPane.showMessageDialog(null, "Hello World");
+		
+		try {
+			String firstNumber = JOptionPane.showInputDialog("Input <First Integer>");
+			String secondNumber = JOptionPane.showInputDialog("Input <Second Integer>");
+
+			num1 = Integer.parseInt(firstNumber);
+			num2 = Integer.parseInt(secondNumber);
+			double sum = num1 + num2;
+			JOptionPane.showMessageDialog(null, "Sum is " + sum, "Sum of two Integers", JOptionPane.PLAIN_MESSAGE);
+		} catch (Exception e) {
+			Object[] options = { "OK", "CANCEL" };
+			JOptionPane.showOptionDialog(null, "Debe ingresar valores numericos", "Warning",
+					JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+		}
+
+		JOptionPane.showMessageDialog(null, "Hello World");
+
+		String name = JOptionPane.showInputDialog("Type your name please");
+		JOptionPane.showMessageDialog(null, "Hello " + name);
+
+		JOptionPane.showConfirmDialog(null, "Desea comentar??", "Seleccion camino", JOptionPane.YES_NO_OPTION);
+
+		Object[] options = { "OK", "CANCEL" };
+		JOptionPane.showOptionDialog(null, "Debe ingresar toda la información solicitada", "Warning",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+
+		String inputValue = JOptionPane.showInputDialog("Ingrese un valor");
+		inputValue = inputValue.toUpperCase();
+		JOptionPane.showMessageDialog(null, inputValue);
+
+		Object[] possibleValues = { "Valida Rut", "Patante Antigua", "Patente Nueva" };
+		Object selectedValue = JOptionPane.showInputDialog(null, "Seleccione", "Menu principal",
+				JOptionPane.INFORMATION_MESSAGE, null, possibleValues, possibleValues[0]);
+
+//		Show an error dialog that displays the message, 'alert':
+		JOptionPane.showMessageDialog(null, "alert", "alert", JOptionPane.ERROR_MESSAGE);
+
+//			Show an internal information dialog with the message, 'information':
+//			JOptionPane.showInternalMessageDialog(frame, "information",
+//			"information", JOptionPane.INFORMATION_MESSAGE);
+		
+//		System.out.println("aqui voy ");
+//		String[] optionsX = {"Opcion A", "Opcion B", "Opcion C", "Opcion D"};
+//		int seleccion = JOptionPane.showOptionDialog(null, 
+//				"Es necesario que seleccione una opcion", "Titulo", 
+//				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, 
+//				optionsX, optionsX[0]);
+		
+		System.out.println("Seleccion "+seleccion);
 	}
 
 }
