@@ -10,14 +10,40 @@ public class probarClasesyObjetos {
 		// TODO Auto-generated method stub
 
 //Clase Scanner
-		
+
 		Scanner s = new Scanner(System.in);
-		
+
+//		Burbuja
+		int auxiliar;
+//	      int[] arreglo;
+//		int[] arreglo;
+
+		int arreglo[] = { 8, 6, 7, 2, 1, 8, 6, 8, 7, 1, 9, 10, 2, 1 };
+
+		for (int i = 0; i < arreglo.length; i++) {
+			for (int j = 0; j < arreglo.length - 1; j++) {
+				if (arreglo[j] > arreglo[j + 1]) {
+					int tmp = arreglo[j + 1];
+					arreglo[j + 1] = arreglo[j];
+					arreglo[j] = tmp;
+				}
+			}
+		}
+		for (int i = 0; i < arreglo.length; i++) {
+			System.out.print(arreglo[i] + "\n");
+		}
+
+//	    public static void main(String[] args) 
+//	    {
+		// Valores que tiene el arreglo desordenado.
+
+//	      int arregloOrdenado[] = burbuja(arreglo);
+
 		System.out.println("Ingrese un número...: ");
 		int b = 0;
 		while (!s.hasNextInt())
 			s.next();
-		
+
 		b = s.nextInt();
 		System.out.println(b);
 
@@ -25,10 +51,10 @@ public class probarClasesyObjetos {
 		String c = "";
 		while (!s.hasNext())
 			s.next();
-				
+
 		c = s.next();
 		System.out.println(c);
-		
+
 		System.out.println("Ingrese un double...: ");
 		double d = 0;
 		while (!s.hasNextDouble())
@@ -36,7 +62,7 @@ public class probarClasesyObjetos {
 
 		d = s.nextDouble();
 		System.out.println(d);
-		
+
 //		System.out.println("Ingrese un boolean...: ");
 //		boolean e = true;
 //		while (!s.hasNextBoolean())
@@ -46,39 +72,37 @@ public class probarClasesyObjetos {
 //		System.out.println(e);
 
 // Manejo de String
-		
+
 //		char charAt(int index): Devuelve el carácter que está en esa posición
 		String primero = "primero";
 		String segundo = "segundo";
 		int dif = primero.compareTo(segundo);
 		if (dif == 0) {
-			System.out.println("primero "+primero+" gual a "+segundo);
+			System.out.println("primero " + primero + " gual a " + segundo);
 		} else {
-			System.out.println("primero "+primero+" distinto a "+segundo);
+			System.out.println("primero " + primero + " distinto a " + segundo);
 		}
-		
+
 		primero = "primero";
 		segundo = "PriMEo";
 		dif = primero.compareToIgnoreCase(segundo);
 		if (dif == 0) {
-			System.out.println("primero "+primero+" gual a "+segundo);
+			System.out.println("primero " + primero + " gual a " + segundo);
 		} else {
-			System.out.println("primero "+primero+" distinto a "+segundo);
+			System.out.println("primero " + primero + " distinto a " + segundo);
 		}
-		
+
 		primero = "    hola como estas ...todo bien???     ";
 		segundo = primero.trim();
-		System.out.println("asi es primero "+primero);
-		System.out.println("primero quedo como: "+segundo);
-		
+		System.out.println("asi es primero " + primero);
+		System.out.println("primero quedo como: " + segundo);
 
 		primero = "33";
-		int a = Integer.parseInt(primero); //a vale 33
-		System.out.println("primero es numerico...: : "+a);
-		
+		int a = Integer.parseInt(primero); // a vale 33
+		System.out.println("primero es numerico...: : " + a);
+
 //		Clase Math
-		
-		
+
 //		Clase especial que contiene funciones y constantes matemáticas.
 //		Se usa poniendo Math.<metodo>
 //		Atributos: Math.E y Math.PI
@@ -98,33 +122,34 @@ public class probarClasesyObjetos {
 		double num1 = 5;
 		double num2 = 7;
 		double num3 = 0;
-		
+
 		System.out.println(" ");
-		
+
 		num3 = Math.exp(num1);
-		System.out.println("exponencial "+num3);
-		
+		System.out.println("exponencial " + num3);
+
 		num3 = Math.sqrt(num1);
-		System.out.println("raiz "+num3);
-		
+		System.out.println("raiz " + num3);
+
 		num3 = Math.random();
-		System.out.println("random "+num3);
-		
+		System.out.println("random " + num3);
+
 //		JOption
 //		#################################################
 		System.out.println("aqui voy ");
-		String[] optionsX = {"Opcion A", "Opcion B", "Opcion C", "Opcion D"};
-		int seleccion = JOptionPane.showOptionDialog(null, 
-				"Es necesario que seleccione una opcion", "Titulo", 
-				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, 
-				optionsX, optionsX[0]);
-		
-		System.out.println("Seleccion "+seleccion);
-		
-        JOptionPane.showMessageDialog(null, "Operación realizada correctamente");
-        
+
+		JOptionPane.showMessageDialog(null, "Pruebas JOption");
+
+		String[] optionsX = { "Opcion A", "Opcion B", "Opcion C", "Opcion D" };
+		int seleccion = JOptionPane.showOptionDialog(null, "Es necesario que seleccione una opcion", "Titulo",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, optionsX, optionsX[0]);
+
+		System.out.println("Seleccion " + seleccion);
+
+		JOptionPane.showMessageDialog(null, "Operación realizada correctamente");
+
 		JOptionPane.showMessageDialog(null, "Hello World");
-		
+
 		try {
 			String firstNumber = JOptionPane.showInputDialog("Input <First Integer>");
 			String secondNumber = JOptionPane.showInputDialog("Input <Second Integer>");
@@ -135,8 +160,8 @@ public class probarClasesyObjetos {
 			JOptionPane.showMessageDialog(null, "Sum is " + sum, "Sum of two Integers", JOptionPane.PLAIN_MESSAGE);
 		} catch (Exception e) {
 			Object[] options = { "OK", "CANCEL" };
-			JOptionPane.showOptionDialog(null, "Debe ingresar valores numericos", "Warning",
-					JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+			JOptionPane.showOptionDialog(null, "Debe ingresar valores numericos", "Warning", JOptionPane.DEFAULT_OPTION,
+					JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 		}
 
 		JOptionPane.showMessageDialog(null, "Hello World");
@@ -164,15 +189,37 @@ public class probarClasesyObjetos {
 //			Show an internal information dialog with the message, 'information':
 //			JOptionPane.showInternalMessageDialog(frame, "information",
 //			"information", JOptionPane.INFORMATION_MESSAGE);
-		
-//		System.out.println("aqui voy ");
-//		String[] optionsX = {"Opcion A", "Opcion B", "Opcion C", "Opcion D"};
-//		int seleccion = JOptionPane.showOptionDialog(null, 
-//				"Es necesario que seleccione una opcion", "Titulo", 
-//				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, 
-//				optionsX, optionsX[0]);
-//		hh
-		System.out.println("Seleccion "+seleccion);
-	}
 
+		String msj = "prueba de mensaje";
+		JOptionPane.showMessageDialog(null, msj, // Mensaje
+				"Mensaje Plano", // Título
+				JOptionPane.PLAIN_MESSAGE); // Tipo de mensaje
+
+		JOptionPane.showMessageDialog(null, msj, // Mensaje
+				"Mensaje Informativo", // Título
+				JOptionPane.INFORMATION_MESSAGE); // Tipo de mensaje
+
+		JOptionPane.showMessageDialog(null, msj, // Mensaje
+				"Mensaje de Pregunta", // Título
+				JOptionPane.QUESTION_MESSAGE); // Tipo de mensaje
+
+		JOptionPane.showMessageDialog(null, msj, // Mensaje
+				"Mensaje de Error", // Título
+				JOptionPane.ERROR_MESSAGE); // Tipo de mensaje
+
+		JOptionPane.showMessageDialog(null, msj, // Mensaje
+				"Mensaje de Advertencia", // Título
+				JOptionPane.WARNING_MESSAGE); // Tipo de mensaje
+
+		String nl = System.getProperty("line.separator");
+		// Lanzamos el mensaje:
+		JOptionPane.showMessageDialog(null,
+				"Soy un mensaje" 
+					+ nl 
+					+ "de varias líneas..." 
+					+ nl 
+					+ "Y esto es todo .....");
+
+	}
+//	}
 }
