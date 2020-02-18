@@ -1,5 +1,6 @@
 package definicionClasesyObjetos;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -13,10 +14,12 @@ public class probarClasesyObjetos {
 
 		Scanner s = new Scanner(System.in);
 
+		String[] maeletras = new String[18];
+		int [] maenumero = new int [18];
+		String[][] matletras = new String[18][2];
+		int [][] matnumero = new int [18][2];
+
 //		Burbuja
-		int auxiliar;
-//	      int[] arreglo;
-//		int[] arreglo;
 
 		int arreglo[] = { 8, 6, 7, 2, 1, 8, 6, 8, 7, 1, 9, 10, 2, 1 };
 
@@ -33,12 +36,72 @@ public class probarClasesyObjetos {
 			System.out.print(arreglo[i] + "\n");
 		}
 
-//	    public static void main(String[] args) 
-//	    {
-		// Valores que tiene el arreglo desordenado.
+//##################################################
+		String par2 = "S";
+		int opcion = 0;
+		while (par2.contentEquals("S")) {
+			opcion = 0;
+			try {
+				opcion = 2;
+			} catch (InputMismatchException e) {
+				opcion = 5;
+				System.out.println(" ");
+			}
 
-//	      int arregloOrdenado[] = burbuja(arreglo);
+			switch (opcion) {
+			case 1:
+				System.out.println("Calculando digito verificador personas");
+				System.out.println(" ");
 
+//				validaRutPersona llamada1 = new validaRutPersona();
+//				llamada1.validaRutPersona();
+				break;
+
+			case 2:
+				System.out.println("Opción 2: Calculando digito verificador Patentes antiguas.");
+				System.out.println(" ");
+
+//				validaPatenteAntigua llamada2 = new validaPatenteAntigua();
+//				llamada2.validaPatenteAntigua();
+				par2 = "N";
+				break;
+
+			case 3:
+				System.out.println("Opción 3: Calcula digito verificador Patentes nuevas.");
+				System.out.println(" ");
+
+//				validaPatenteNueva llamada3 = new validaPatenteNueva();
+//				llamada3.validaPatenteNueva();
+				par2 = "N";
+
+				break;
+
+			case 4:
+				System.out.println("Opción 4: Pruebas.");
+				System.out.println(" ");
+
+//				pruebas llamada4 = new pruebas();
+//				llamada4.pruebas();
+				par2 = "N";
+
+				break;
+			default:
+				System.out.println(" ");
+				if (opcion == 9) {
+					System.out.println("Fin del proceso...");
+					par2 = "N";
+				} else {
+					System.out.println("No se pudo determinar opción. Elija otra...: ");
+//					entrada.next();
+					par2 = "S";
+				}
+				break;
+			}
+		}
+//##################################################
+		
+//	      Ingreso de textos
+//
 		System.out.println("Ingrese un número...: ");
 		int b = 0;
 		while (!s.hasNextInt())
