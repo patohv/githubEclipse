@@ -1,5 +1,7 @@
 package definicionClasesyObjetos;
 
+import java.util.ArrayList;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -10,14 +12,60 @@ public class probarClasesyObjetos {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-//Clase Scanner
-
+//	Clase Scanner
+//
 		Scanner s = new Scanner(System.in);
 
 		String[] maeletras = new String[18];
-		int [] maenumero = new int [18];
+		int[] maenumero = new int[18];
 		String[][] matletras = new String[18][2];
-		int [][] matnumero = new int [18][2];
+		int[][] matnumero = new int[18][2];
+
+//####################################################
+
+//	ArrayList
+//
+		ArrayList listaNums = new ArrayList();
+		listaNums.add(8);
+		listaNums.add(3);
+		listaNums.add(5);
+		System.out.println("Lista de numeros: " + listaNums);
+		System.out.println("Numero posicion 2:" + listaNums.get(2));
+		System.out.println("Numero posicion 1:" + listaNums.get(1));
+		listaNums.set(0, 15);
+		System.out.println("Lista de numeros: " + listaNums);
+		
+		// Declaración de un ArrayList de "String". Puede ser de cualquier otro Elemento u Objeto (float, Boolean, Object, ...)
+		ArrayList<String> nombreArrayList = new ArrayList<String>();
+		// Añade el elemento al ArrayList
+		nombreArrayList.add("Elemento");
+		// Añade el elemento al ArrayList en la posición 'n'
+		int n = 4;
+		nombreArrayList.add(n, "Elemento 2");
+		// Devuelve el numero de elementos del ArrayList
+		nombreArrayList.size();
+		// Devuelve el elemento que esta en la posición '2' del ArrayList
+		nombreArrayList.get(2);
+		// Comprueba se existe del elemento ('Elemento') que se le pasa como parametro
+		nombreArrayList.contains("Elemento");
+		// Devuelve la posición de la primera ocurrencia ('Elemento') en el ArrayList  
+		nombreArrayList.indexOf("Elemento");
+		// Devuelve la posición de la última ocurrencia ('Elemento') en el ArrayList   
+		nombreArrayList.lastIndexOf("Elemento");
+		// Borra el elemento de la posición '5' del ArrayList   
+		nombreArrayList.remove(5); 
+		// Borra la primera ocurrencia del 'Elemento' que se le pasa como parametro.  
+		nombreArrayList.remove("Elemento");
+		//Borra todos los elementos de ArrayList   
+		nombreArrayList.clear();
+		// Devuelve True si el ArrayList esta vacio. Sino Devuelve False   
+		nombreArrayList.isEmpty();  
+		// Copiar un ArrayList 
+		ArrayList arrayListCopia = (ArrayList) nombreArrayList.clone();  
+		// Pasa el ArrayList a un Array 
+		Object[] array = nombreArrayList.toArray(); 
+
+		// ####################################################
 
 //		Burbuja
 
@@ -99,7 +147,7 @@ public class probarClasesyObjetos {
 			}
 		}
 //##################################################
-		
+
 //	      Ingreso de textos
 //
 		System.out.println("Ingrese un número...: ");
@@ -277,11 +325,7 @@ public class probarClasesyObjetos {
 		String nl = System.getProperty("line.separator");
 		// Lanzamos el mensaje:
 		JOptionPane.showMessageDialog(null,
-				"Soy un mensaje" 
-					+ nl 
-					+ "de varias líneas..." 
-					+ nl 
-					+ "Y esto es todo .....");
+				"Soy un mensaje" + nl + "de varias líneas..." + nl + "Y esto es todo .....");
 
 	}
 //	}
