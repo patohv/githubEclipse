@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>650</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>votaciones::Carro
+--
+~nombre: java.lang.String
+~fila: int
+~columna: int
+~ocupantes: int
+~agno: int
+~marca: java.lang.String
+~tiro: int
+~confetti: java.lang.String
+~armadura: int
+~nombre2: java.lang.String
+~anio: int
+~mes: int
+~dia: int
+~fechaIngreso: java.util.Date
+--
++Carro(java.lang.String, int, int, int, int, java.lang.String, int, java.lang.String, int, java.lang.String): ctor
++setNombre(java.lang.String): void
++getDimeNombre(): java.lang.String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>10</y>
+      <w>240</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>votaciones::Tablero
+--
+~i: int
+~j: int
+~fila: int
+~columna: int
+~pos: int
+~h: int
+~k: int
+~puntaje: int
+~matrizCarros: votaciones.Carro[][]
+~listaHuevos: java.util.ArrayList
+~r: java.util.Random
+--
+~Tablero(int, int): ctor
++crearCarro(): void
++lanzarHuevo(int, int): void
++calcularPuntaje(): void
++mostrarMatriz(): void
++main(java.lang.String[]): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>370</y>
+      <w>750</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>votaciones::Carro
+--
+~nombre = "": String
+~fila = 0: int
+~columna = 0: int
+~ocupantes = 0: int
+~agno = 0: int
+~marca = "": String
+~tiro = 0: int
+~confetti = "": String
+~armadura = 0: int
+~nombre2 = "": String
+~anio = 0: int
+~mes = 0: int
+~dia = 0: int
+~fechaIngreso = new Date(): Date
+--
++Carro(String nom, int fila, int columna, int ocupan, int ag, String marc, int tir, String confe, int arma, String nomb): ctor
++setNombre(String nom): void
++getDimeNombre(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>370</y>
+      <w>390</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>votaciones::Tablero
+--
+~i = 0: int
+~j = 0: int
+~fila = 0: int
+~columna = 0: int
+~pos = 0: int
+~h = 0: int
+~k = 0: int
+~puntaje = 0: int
+~matrizCarros: Carro[][]
+~listaHuevos = new ArrayList&lt;Huevo&gt;(): ArrayList&lt;Huevo&gt;
+~r = new Random(): Random
+--
+~Tablero(int nfilas, int ncolumnas): ctor
++crearCarro(): void
++lanzarHuevo(int fil, int colum): void
++calcularPuntaje(): void
++mostrarMatriz(): void
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>730</y>
+      <w>170</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>votaciones::Huevo
+--
+~fila: int
+~columna: int
+~puntaje: int
+--
++Huevo(int, int, int): ctor
++getPuntaje(): int
++getFila(): int
++getColumna(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>730</y>
+      <w>250</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>votaciones::Huevo
+--
+~fila: int
+~columna: int
+~puntaje: int
+--
++Huevo(int fil, int colum, int punt): ctor
++getPuntaje(): int
++getFila(): int
++getColumna(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
