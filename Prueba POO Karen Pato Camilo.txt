@@ -1,0 +1,57 @@
+Desarrollo
+==========
+Nombre proyecto: Prueba_java_20200224_grupal
+
+Package:	votaciones
+
+Clases:		Tablero (principal)
+		Huevo
+		Carro
+
+La clase principal contiene los métodos
+
+crearCarro:
+	Aquí se permite crear Kromis, Caguanos y Trupallas solicitadas en matriz o tablero generado.
+Los vehículos generados son almacenados en un Arreglo de objetos Carro que contiene los atributos solicitados 
+de nombre, fila, columna, año, marca, etc. según solicitado para cada vehículo
+
+lanzarHuevo:
+	Aquí se establecen las coordenadas de los disparos (entre 1 y 15 para mayor facilidad del usuario) y se 
+registran en la matriz. Además se ingresa cada disparo a un ArrayList de objetos Huevo, que contienen los datos de
+coordenadas del disparo y puntaje obtenido en lanzamiento.
+	Los disparos quedan registrados en la matriz con el valor "H" cuando no hay impacto sobre un vehículo y con un valor "h" cuando hay impactosobre un vehículo. Esto con el objetivo de no perder la apreciación visual de las ubicaciones iniciales de los vehículos.
+
+calcularPuntaje:
+	Este método permite almacenar los puntaje obtenidos por cada disparo de huevo realizado.
+
+mostrarMatriz:
+	Este método permite desplegar la matriz cuando sea necesario para revisar los estados de las naves y los posibles impactos de los disparos realizados.
+
+Además de los métodos antes mencionados, la clase contiene el menu del programa con las opciones:
+
+1.- Lanzar huevos
+2.- Calcular puntaje
+3.- Mostrar matriz
+5.- Salir
+
+La clase Huevo contiene los sgtes. métodos:
+
+getPuntaje:
+Permite obtener el puntaje logrado hasta el momento por el usuario por os disparos de huevos realizados.
+
+getFila:
+	Permite obtener el número de fila para obtener las coordenadas de los disparos
+
+getColumna:
+	Permite obtener el número de columna para obtener las coordenadas de los disparos
+
+La clase Carro posee los sgtes. métodos:
+
+setNombre:
+Permite registrar el nombre o tipo de vehículo (K, C, T).
+
+getDimeNombre:
+Permite obtener el nombre o tipo de vehículo (K, C, T).
+
+Carro
+	Es el objeto que contrila la información de los vehículos generados, se utiliza para almacenar la información de los vehículos en el arreglo antes mencionado.
